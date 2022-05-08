@@ -2,7 +2,7 @@
 title: "Lista 1"
 author: 
 - 'Aluno: Gustavo Luiz Bispo dos Santos - 117210400'
-- 'Teste'
+- 'Aluno: Diego Amancio Pereira - 116210716'
 date: 'Data: 07/05/2022'
 output: html_document
 ---
