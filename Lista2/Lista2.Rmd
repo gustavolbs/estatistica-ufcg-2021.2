@@ -1,0 +1,66 @@
+---
+title: "Lista 2"
+author: 
+- 'Aluno: Gustavo Luiz Bispo dos Santos - 117210400'
+- 'Aluno: Diego Amancio Pereira - 116210716'
+- 'Aluno: - '
+date: 'Data: 10/05/2022'
+output: html_document
+---
+
+```{r, include=FALSE}
+library(Rlab)
+```
+
+### Questão 1
+_Apresente/Descreva um problema em que seja necessário o planejamento e o desenvolvimento de uma pesquisa(estudo)  estatística(o) para que o mesmo seja resolvido._
+
+**Resposta:** 
+
+
+### Questão 2
+_A partir do problema descrito acima:_
+
+_a) Diga qual é a população associada ao problema e o tipo._
+
+**Resposta:**
+
+_b) Apresente os objetivos geral e específicos do estudo(pesquisa) estatístico(a)._
+
+**Resposta:**
+
+_c) Diga quais variáveis e quais os seus tipos podem ser de interesse na pesquisa._
+
+**Resposta:** 
+
+_d) A pesquisa requer a coleta de uma amostra? Por que?_
+
+**Resposta:**
+
+_e) Se a pesquisa requer a coleta de uma amostra:_
+
+
++ _i) Diga o que a constitui e que tipo de amostragem é mais adequado para a sua coleta._
+
+    **Resposta:**
+
++ _ii) Apresente as informações, o cálculo e o resultado para o tamanho da amostra._
+
+    **Resposta:**
+
+_f) Na sua pesquisa o que pode ser apresentado como exemplo de parâmetro, estatística e estimativa?_
+
+**Resposta:** 
+
+### Questão 3
+_Apresente ou colete uma base de dados necessária para a resolução de um problema (pode ser o mesmo do item 1) que requer uma análise estatística descritiva e inferencial._
+
+_a) Descreva o problema, população, amostra, tipo de amostragem, objetivos geral e específicos, variáveis e tipos correspondentes, além de dizer quais são os parâmetros que mais interessam analisar._
+
+**Resposta:**
+
+_b) Anexe; separadamente; a base de dados em excel ou csv ou disponibilize o link de acesso à base._
+
+**Resposta:**
+
+<br /><br /><br /><br /><br />
