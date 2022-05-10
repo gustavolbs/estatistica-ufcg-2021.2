@@ -3,7 +3,7 @@ title: "Lista 2"
 author: 
 - 'Aluno: Gustavo Luiz Bispo dos Santos - 117210400'
 - 'Aluno: Diego Amancio Pereira - 116210716'
-- 'Aluno: - '
+- 'Aluno: Gilmar Gonzaga da Silva - 119211123'
 date: 'Data: 10/05/2022'
 output: html_document
 ---
@@ -15,7 +15,9 @@ library(Rlab)
 ### Questão 1
 _Apresente/Descreva um problema em que seja necessário o planejamento e o desenvolvimento de uma pesquisa(estudo)  estatística(o) para que o mesmo seja resolvido._
 
-**Resposta:** 
+**Resposta:** Com o passar do tempo a cobertura vacinal da covid np Brasil aumenta mas de forma lenta pois as pessoas estão indo menos aos postos se vacinarem, 
+resultando em desperdicio de vacinas nos postos de saúde, visto que a demanda atual está sendo muito menor em relação a esperada.
+
 
 
 ### Questão 2
@@ -23,19 +25,20 @@ _A partir do problema descrito acima:_
 
 _a) Diga qual é a população associada ao problema e o tipo._
 
-**Resposta:**
+**Resposta:** População brasileira e é do tipo infinita.
 
 _b) Apresente os objetivos geral e específicos do estudo(pesquisa) estatístico(a)._
 
-**Resposta:**
+**Resposta:** Prever a demanda vacinal futura e mapear as áreas onde estão precisando
+mais das vacinas.
 
 _c) Diga quais variáveis e quais os seus tipos podem ser de interesse na pesquisa._
 
-**Resposta:** 
+**Resposta:** Número de pessoas vacinadas (covid,gripe) por dia (Quantitativa discreta), estoque de vacinas (covid,gripe) (Quantitativa discreta), classe social das pessoas que foram vacinadas (Qualitativa ordinal).
 
 _d) A pesquisa requer a coleta de uma amostra? Por que?_
 
-**Resposta:**
+**Resposta:** Sim, pois devido a grande população é necessário fazer pesquisar pegando amostras dessa população como cidades ou regiões mais populosas.
 
 _e) Se a pesquisa requer a coleta de uma amostra:_
 
