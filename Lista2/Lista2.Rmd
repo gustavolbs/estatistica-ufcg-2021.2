@@ -15,8 +15,8 @@ library(Rlab)
 ### Questão 1
 _Apresente/Descreva um problema em que seja necessário o planejamento e o desenvolvimento de uma pesquisa(estudo)  estatística(o) para que o mesmo seja resolvido._
 
-**Resposta:** Com o passar do tempo a cobertura vacinal da covid np Brasil aumenta mas de forma lenta pois as pessoas estão indo menos aos postos se vacinarem, 
-resultando em desperdicio de vacinas nos postos de saúde, visto que a demanda atual está sendo muito menor em relação a esperada.
+**Resposta:** Com o passar do tempo, a cobertura vacinal da covid no Brasil aumenta, porém, de forma lenta pois as pessoas estão indo menos aos postos se vacinar, 
+resultando em desperdicio de vacinas nos postos de saúde, visto que a demanda atual está sendo muito menor em relação a esperada. Dessa forma, um estudo estatístico seria necessário para entender qual grupo etário tem deixado de tomar as vacinas, as regiões mais afetadas, qual a motivação, qual o percentual e, com isso, traçar planos de solução para a questão.
 
 
 
@@ -27,33 +27,62 @@ _a) Diga qual é a população associada ao problema e o tipo._
 
 **Resposta:** População brasileira e é do tipo infinita.
 
-_b) Apresente os objetivos geral e específicos do estudo(pesquisa) estatístico(a)._
+_b) Apresente os objetivos geral e específicos do estudo (pesquisa) estatístico(a)._
 
-**Resposta:** Prever a demanda vacinal futura e mapear as áreas onde estão precisando
-mais das vacinas.
+**Resposta:** Prever a demanda vacinal futura, mapear as áreas onde mais se precisa das vacinas, prevenir desperdício dos compostos e maximizar a eficiência das campanhas.
 
 _c) Diga quais variáveis e quais os seus tipos podem ser de interesse na pesquisa._
 
-**Resposta:** Número de pessoas vacinadas (covid,gripe) por dia (Quantitativa discreta), estoque de vacinas (covid,gripe) (Quantitativa discreta), classe social das pessoas que foram vacinadas (Qualitativa ordinal).
+**Resposta:** Número de pessoas vacinadas (covid, gripe) por dia (Quantitativa discreta), estoque de vacinas (covid, gripe) (Quantitativa discreta), classe social das pessoas que foram vacinadas (Qualitativa ordinal).
 
 _d) A pesquisa requer a coleta de uma amostra? Por que?_
 
-**Resposta:** Sim, pois devido a grande população é necessário fazer pesquisar pegando amostras dessa população como cidades ou regiões mais populosas.
+**Resposta:** Sim, pois, devido a grande população, é necessário buscar informações em campo, pegando amostras dessa população como cidades ou regiões mais populosas.
 
 _e) Se a pesquisa requer a coleta de uma amostra:_
 
-
 + _i) Diga o que a constitui e que tipo de amostragem é mais adequado para a sua coleta._
 
-    **Resposta:**
+    **Resposta:** Para essa pesquisa, precisariamos, na amostra, da idade das pessoas, região onde reside e motivo para a não vacinação. Quanto a técnica necessária, seria o levantamento amostral, onde nosso tipo de amostragem seria Não-probabilística. 
 
 + _ii) Apresente as informações, o cálculo e o resultado para o tamanho da amostra._
 
-    **Resposta:**
+    **Resposta:** 
+    
+    Cálculo:
+    
+    Erro amostral:
+$$E = h − p$$
+
+  $E$: é o erro amostral
+  
+  $h$: é a proporção amostral
+  
+  $p$: é a população
+  
+  <br />
+    
+    Tamanho mínimo:
+$$n_0  = \frac{1}{E^2}, 0 < E < 1$$
+    
+  $n_0$: é uma primeira aproximação para o tamanho da amostra;
+  
+  $E$: é o erro amostral tolerável (supondo que o interesse é estimar a proporção de elementos populacionais com uma certa característica).
+    
+  <br />
+  
+  Conhecendo o tamanho $N$ da população, podemos corrigir o tamanho mínimo, resultando em:
+  
+  $$n = \frac{N * n_0}{N + n_0}$$
+  $n$: é o tamanho da amostra final corrigido pelo tamanho populacional $N$;
+  
+  $N$: é o tamanho da população.
+  
 
 _f) Na sua pesquisa o que pode ser apresentado como exemplo de parâmetro, estatística e estimativa?_
 
-**Resposta:** 
+**Resposta:** Podem ser considerados como parâmetros, considerando a população como sendo uma variável aleatória $X$, a média de pessoas não vacinadas em uma faixa etária $X$ $(\mu)$ e sua variância $(\sigma^2)$. Podem ser tratados como estatística, a média, variância e a proporção amostrais, dentre outras possíveis estatísticas que poderíamos inferir. Poderiamos ter como estimativa a quantidade média de pessoas que não se vacinaram.
+
 
 ### Questão 3
 _Apresente ou colete uma base de dados necessária para a resolução de um problema (pode ser o mesmo do item 1) que requer uma análise estatística descritiva e inferencial._
