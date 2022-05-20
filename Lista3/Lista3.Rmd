@@ -37,13 +37,26 @@ _g) o valor do quantil z, da tabela (de preferência da acumulada) da normal pad
 **Resposta:** 0.12
 
 _h) o valor do quantil z, da tabela da normal padrão, tal que, P(Z ≥ z) = 0, 05._
-**Resposta:** 1.65
+**Resposta:** 1.64
 
 _i) Apresente os inputs e ouputs usando a linguagem R de todos os cálculos dos itens anteriores._
+<br />
 **Resposta:**
-  _a) input pnorm(1.64,mean=0,sd=1) output: [1] 0.9494974_
-  _b) input  output:_
-  _c) input pnorm(1.64,mean=0,sd=1) output: [1] 0.9494974_
-  _d) input pnorm(-1.64,mean=0,sd=1) output: [1] 0.05050258_
-=
+<br />
+_a) input pnorm(1.64,mean=0,sd=1) output: [1] 0.9494974_
+<br />
+_b) input  output:_
+<br />
+_c) input pnorm(1.64,mean=0,sd=1) output: [1] 0.9494974_
+<br />
+_d) input pnorm(-1.64,mean=0,sd=1) output: [1] 0.05050258_
+<br />
+_e) input pnorm(1.64,mean=0,sd=1)-pnorm(-1.64,mean=0,sd=1) output:[1] 0.8989948 _
+<br />
+_f) input 1-pnorm(1.64,mean=0,sd=1) output: [1] 0.05050258_
+<br />
+_g) input output: _
+<br />
+_h) input qnorm(0.05, lower.tail=FALSE) output: [1] 1.644854_
+
 <br /><br /><br /><br /><br />
