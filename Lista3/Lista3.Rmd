@@ -1,0 +1,49 @@
+---
+title: "Lista 2"
+author: 
+- 'Aluno: Gustavo Luiz Bispo dos Santos - 117210400'
+- 'Aluno: Diego Amancio Pereira - 116210716'
+- 'Aluno: Gilmar Gonzaga da Silva - 119211123'
+date: 'Data: 20/05/2022'
+output: html_document
+---
+1,65
+```{r, include=FALSE}
+library(Rlab)
+```
+
+### Questão 1
+_Se a variável Z tem distribuição normal padrão, isto é, Z ∼ N(0; 1), obtenha:_
+
+_a) P(Z < 1,64)_
+**Resposta:** 0.9495
+
+_b) P(Z = 1,64)_
+**Resposta:** 0
+
+_c) P(Z ≤ 1,64)_
+**Resposta:** 0.9495
+
+_d) P(Z < −1,64)_
+**Resposta:** 0.0505
+
+_e) P(−1,64 < Z < 1,64);_
+**Resposta:** 0.899
+
+_f) P(Z > 1,64)_
+**Resposta:** 0.0505
+
+_g) o valor do quantil z, da tabela (de preferência da acumulada) da normal padrão, tal que, P(Z < z) = 0, 05 (5%)_
+**Resposta:** 0.12
+
+_h) o valor do quantil z, da tabela da normal padrão, tal que, P(Z ≥ z) = 0, 05._
+**Resposta:** 1.65
+
+_i) Apresente os inputs e ouputs usando a linguagem R de todos os cálculos dos itens anteriores._
+**Resposta:**
+  _a) input pnorm(1.64,mean=0,sd=1) output: [1] 0.9494974_
+  _b) input  output:_
+  _c) input pnorm(1.64,mean=0,sd=1) output: [1] 0.9494974_
+  _d) input pnorm(-1.64,mean=0,sd=1) output: [1] 0.05050258_
+=
+<br /><br /><br /><br /><br />
