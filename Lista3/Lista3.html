@@ -376,13 +376,13 @@ pre code {
 <p>1,65</p>
 <div id="questão-1" class="section level3">
 <h3>Questão 1</h3>
-<p><em>Se a variável Z tem distribuição normal padrão, isto é, Z ∼ N(0;
-1), obtenha:</em></p>
+<p>__Se a variável Z tem distribuição normal padrão, isto é, Z ∼ N(0_
+1), obtenha:_ <strong>Resposta:</strong></p>
 <p><em>a) P(Z &lt; 1,64)</em> <strong>Resposta:</strong> 0.9495</p>
-<p><em>b) P(Z = 1,64)</em> <strong>Resposta:</strong> 0</p>
+<p><em>b) P(Z = 1,64)</em> <strong>Resposta:</strong> 0.9495</p>
 <p><em>c) P(Z ≤ 1,64)</em> <strong>Resposta:</strong> 0.9495</p>
 <p><em>d) P(Z &lt; −1,64)</em> <strong>Resposta:</strong> 0.0505</p>
-<p><em>e) P(−1,64 &lt; Z &lt; 1,64);</em> <strong>Resposta:</strong>
+<p><em>e) P(−1,64 &lt; Z &lt; 1,64)</em> <strong>Resposta:</strong>
 0.899</p>
 <p><em>f) P(Z &gt; 1,64)</em> <strong>Resposta:</strong> 0.0505</p>
 <p><em>g) o valor do quantil z, da tabela (de preferência da acumulada)
@@ -391,16 +391,62 @@ da normal padrão, tal que, P(Z &lt; z) = 0, 05 (5%)</em>
 <p><em>h) o valor do quantil z, da tabela da normal padrão, tal que, P(Z
 ≥ z) = 0, 05.</em> <strong>Resposta:</strong> 1.64</p>
 <p><em>i) Apresente os inputs e ouputs usando a linguagem R de todos os
-cálculos dos itens anteriores.</em> <br /> <strong>Resposta:</strong>
-<br /> <em>a) input pnorm(1.64,mean=0,sd=1) output: [1] 0.9494974</em>
-<br /> <em>b) input output:</em> <br /> <em>c) input
-pnorm(1.64,mean=0,sd=1) output: [1] 0.9494974</em> <br /> <em>d) input
-pnorm(-1.64,mean=0,sd=1) output: [1] 0.05050258</em> <br /> <em>e) input
-pnorm(1.64,mean=0,sd=1)-pnorm(-1.64,mean=0,sd=1) output:[1] 0.8989948
-</em> <br /> <em>f) input 1-pnorm(1.64,mean=0,sd=1) output: [1]
-0.05050258</em> <br /> <em>g) input output: </em> <br /> <em>h) input
-qnorm(0.05, lower.tail=FALSE) output: [1] 1.644854</em></p>
-<p>= <br /><br /><br /><br /><br /></p>
+cálculos dos itens anteriores.</em> <br /></p>
+<p><strong>Resposta:</strong></p>
+<p><br /></p>
+<p><em>a) input pnorm(1.64,mean=0,sd=1) output: [1] 0.9494974</em>
+<br /></p>
+<p><em>b) input pnorm(1.64,mean=0,sd=1) output: [1] 0.9494974</em>
+<br /></p>
+<p><em>c) input pnorm(1.64,mean=0,sd=1) output: [1] 0.9494974</em>
+<br /></p>
+<p><em>d) input pnorm(-1.64,mean=0,sd=1) output: [1] 0.05050258</em>
+<br /></p>
+<p><em>e) input pnorm(1.64,mean=0,sd=1)-pnorm(-1.64,mean=0,sd=1)
+output:[1] 0.8989948</em> <br /></p>
+<p><em>f) input 1-pnorm(1.64,mean=0,sd=1) output: [1] 0.05050258</em>
+<br /></p>
+<p><em>g) input output:</em> <br /></p>
+<p><em>h) input qnorm(0.05, lower.tail=FALSE) output: [1]
+1.644854</em></p>
+</div>
+<div id="questão-2" class="section level3">
+<h3>Questão 2</h3>
+<p><em>Seja X uma v.a, tal que, X ∼ N(100, 25), determinar:</em></p>
+<p><em>a) P(X ≥ 108)</em> <strong>Resposta:</strong> 0.0548</p>
+<p><em>b) P(X = 100)</em> <strong>Resposta:</strong> 0.5</p>
+<p><em>c) P(89 ≤ X ≤ 107)</em> <strong>Resposta:</strong> 0.90534</p>
+<p><em>d) P(12 &lt; X − µ &lt; 16)</em> <strong>Resposta:</strong></p>
+<p><em>e) P(112 &lt; X &lt; 116)</em> <strong>Resposta:</strong>
+0.00751</p>
+<p><em>f) P(X &lt; 100 ou X &gt; 106)</em> <strong>Resposta:</strong>
+0.61507</p>
+<p><em>g) o valor do quantil x, tal que P(X &lt; x) = 0, 05</em>
+<strong>Resposta:</strong> 91.7757</p>
+<p><em>h) o valor do quantil x, tal que P(X &gt; x) = 0, 05</em>
+<strong>Resposta:</strong> 108.2243</p>
+<p><em>i) o valor do quantil x, tal que P(X &gt; x) = 0, 975</em>
+<strong>Resposta:</strong> 90.2</p>
+<p><em>j) Apresente os inputs e ouputs usando a linguagem R de todos os
+cálculos dos itensanteriores sem usar a distribuição da variável
+padronizada Z =</em> <br /></p>
+<p><em>a) input 1 - pnorm(108,mean=100,sd=5) output: [1] 0.05479929</em>
+<br /></p>
+<p><em>b) input pnorm(100,mean=100,sd=5) output: [1] 0.5</em> <br /></p>
+<p><em>c) input pnorm(107, mean = 100, sd = 5) - pnorm(89, mean = 100,
+sd = 5) output: [1] 0.9053399</em> <br /></p>
+<p><em>d) input output: [1]</em> <br /></p>
+<p><em>e) input pnorm(116, mean = 100, sd = 5) - pnorm(112, mean = 100,
+sd = 5) output:[1] 0.007510398</em> <br /></p>
+<p><em>f) input 1-pnorm(106, mean = 100, sd = 5, lower.tail = TRUE) +
+pnorm(100, mean = 100, sd = 5, lower.tail = FALSE) output: [1]
+0.6150697</em> <br /></p>
+<p><em>g) input qnorm(0.05, mean = 100, sd = 5) output:[1] 91.77573</em>
+<br /></p>
+<p><em>h) qnorm(0.05, mean = 100, sd = 5 lower.tail=FALSE) output: [1]
+108.2243</em> <br /></p>
+<p><em>h) qnorm(0.975, mean = 100, sd = 5, lower.tail=FALSE) output: [1]
+90.20018</em> .</p>
 </div>
 
 
