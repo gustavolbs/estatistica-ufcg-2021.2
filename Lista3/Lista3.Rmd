@@ -1,13 +1,16 @@
 ---
 title: "Lista 3"
-author: 
+author:
 - 'Aluno: Gustavo Luiz Bispo dos Santos - 117210400'
 - 'Aluno: Diego Amancio Pereira - 116210716'
 - 'Aluno: Gilmar Gonzaga da Silva - 119211123'
 date: 'Data: 20/05/2022'
-output: html_document
+output:
+  pdf_document:
+    latex_engine: xelatex
+  html_document: default
 ---
-1,65
+
 ```{r, include=FALSE}
 library(Rlab)
 ```
@@ -129,6 +132,7 @@ _i) input qnorm(0.975, mean = 100, sd = 5, lower.tail=FALSE) output: [1] 90.2001
 
 
 
+\newpage
 
 ### Questão 5
 _Se a variável aleatória Z segue o comportamento de uma distribuição normal padrão, diga quais devem ser o valor do quantil z tal que:_
@@ -137,12 +141,25 @@ _a) P(−z < Z < z) = 0, 90 (90, 0%)_
 
 **Resposta:** $P (−0.95 ≤ 𝑋 ≤ 0.95) = 0.9$
 
+![Questão 5 letra A](q5a.png){width=300 height=150px}
+
 _b) P(−z < Z < z) = 0, 95 (95, 0%)_
 
 **Resposta:** $P (−0.975 ≤ 𝑋 ≤ 0.975) = 0.95$
+
+![Questão 5 letra B](q5b.png){width=300 height=150px}
 
 _c) P(−z < Z < z) = 0, 99 (99, 0%)_
 
 **Resposta:** $P (−0.995 ≤ 𝑋 ≤ 0.995) = 0.99$
 
+![Questão 5 letra C](q5c.png){width=300 height=150px}
+
 _d) Esboce um gráfico para cada uma dessas situações e elabore uma tabela dos resultados obtidos para você memorizar._
+
+**Resposta:** Os gráficos foram inseridos logo acima.
+
+_e) Existe alguma relaçãao dos resultados desta questão com a anterior (a Questão 4)? Se sim, qual(ais)?_
+
+**Resposta:**
+
