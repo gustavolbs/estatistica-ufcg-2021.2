@@ -1,5 +1,5 @@
 ---
-title: "Lista 2"
+title: "Lista 3"
 author: 
 - 'Aluno: Gustavo Luiz Bispo dos Santos - 117210400'
 - 'Aluno: Diego Amancio Pereira - 116210716'
@@ -13,61 +13,58 @@ library(Rlab)
 ```
 
 ### Questão 1
-__Se a variável Z tem distribuição normal padrão, isto é, Z ∼ N(0_ 1), obtenha:_
-**Resposta:** 
+_Se a variável Z tem distribuição normal padrão, isto é, Z ∼ N(0_ 1), obtenha:_
 
 
 _a) P(Z < 1,64)_
+
 **Resposta:** 0.9495
 
 _b) P(Z = 1,64)_
+
 **Resposta:** 0.9495
 
 _c) P(Z ≤ 1,64)_
+
 **Resposta:** 0.9495
 
 _d) P(Z < −1,64)_
+
 **Resposta:** 0.0505
 
 _e) P(−1,64 < Z < 1,64)_
+
 **Resposta:** 0.899
 
 _f) P(Z > 1,64)_
+
 **Resposta:** 0.0505
 
 _g) o valor do quantil z, da tabela (de preferência da acumulada) da normal padrão, tal que, P(Z < z) = 0, 05 (5%)_
-**Resposta:** 0.12
+
+**Resposta:**  -1.644854
 
 _h) o valor do quantil z, da tabela da normal padrão, tal que, P(Z ≥ z) = 0, 05._
+
 **Resposta:** 1.64
 
 _i) Apresente os inputs e ouputs usando a linguagem R de todos os cálculos dos itens anteriores._
-<br />
 
 **Resposta:**
 
-<br />
-
 _a) input pnorm(1.64,mean=0,sd=1) output: [1] 0.9494974_
-<br />
 
 _b) input pnorm(1.64,mean=0,sd=1) output: [1] 0.9494974_
-<br />
 
 _c) input pnorm(1.64,mean=0,sd=1) output: [1] 0.9494974_
-<br />
 
 _d) input pnorm(-1.64,mean=0,sd=1) output: [1] 0.05050258_
-<br />
 
 _e) input pnorm(1.64,mean=0,sd=1)-pnorm(-1.64,mean=0,sd=1) output:[1] 0.8989948_
-<br />
 
 _f) input 1-pnorm(1.64,mean=0,sd=1) output: [1] 0.05050258_
-<br />
 
-_g) input output:_
-<br />
+_g) input qnorm(0.05) output: [1] -1.644854_
 
 _h) input qnorm(0.05, lower.tail=FALSE) output: [1] 1.644854_
 
@@ -75,59 +72,77 @@ _h) input qnorm(0.05, lower.tail=FALSE) output: [1] 1.644854_
 _Seja X uma v.a, tal que, X ∼ N(100, 25), determinar:_
 
 _a) P(X ≥ 108)_
+
 **Resposta:** 0.0548
 
 _b) P(X = 100)_
+
 **Resposta:** 0.5
 
 _c) P(89 ≤ X ≤ 107)_
+
 **Resposta:** 0.90534
 
 _d) P(12 < X − µ < 16)_
+
 **Resposta:** 
 
 _e) P(112 < X < 116)_
+
 **Resposta:** 0.00751
 
 _f) P(X < 100 ou X > 106)_
+
 **Resposta:**  0.61507
 
 _g) o valor do quantil x, tal que P(X < x) = 0, 05_
+
 **Resposta:** 91.7757
 
 _h) o valor do quantil x, tal que P(X > x) = 0, 05_
+
 **Resposta:** 108.2243
 
 _i) o valor do quantil x, tal que P(X > x) = 0, 975_
+
 **Resposta:** 90.2
 
 _j) Apresente os inputs e ouputs usando a linguagem R de todos os cálculos dos itensanteriores sem usar a distribuição da variável padronizada Z =_
-<br />
 
 _a) input 1 - pnorm(108,mean=100,sd=5) output: [1] 0.05479929_
-<br />
 
 _b) input pnorm(100,mean=100,sd=5) output: [1] 0.5_
-<br />
 
 _c) input pnorm(107, mean = 100, sd = 5) - pnorm(89, mean = 100, sd = 5) output: [1] 0.9053399_
-<br />
 
-_d) input output: [1]_
-<br />
+_d) FALTA: input output: [1]_
 
 _e) input pnorm(116, mean = 100, sd = 5) - pnorm(112, mean = 100, sd = 5) output:[1] 0.007510398_
-<br />
 
 _f) input 1-pnorm(106, mean = 100, sd = 5, lower.tail = TRUE) + pnorm(100, mean = 100, sd = 5, lower.tail = FALSE) output: [1] 0.6150697_
-<br />
 
 _g) input qnorm(0.05, mean = 100, sd = 5) output:[1] 91.77573_
-<br />
 
-_h) qnorm(0.05, mean = 100, sd = 5 lower.tail=FALSE) output: [1] 108.2243_
-<br />
+_h) input qnorm(0.05, mean = 100, sd = 5 lower.tail=FALSE) output: [1] 108.2243_
 
-_h) qnorm(0.975, mean = 100, sd = 5, lower.tail=FALSE) output: [1] 90.20018_
-.
+_i) input qnorm(0.975, mean = 100, sd = 5, lower.tail=FALSE) output: [1] 90.20018_
 
+
+
+
+### Questão 5
+_Se a variável aleatória Z segue o comportamento de uma distribuição normal padrão, diga quais devem ser o valor do quantil z tal que:_
+
+_a) P(−z < Z < z) = 0, 90 (90, 0%)_
+
+**Resposta:** $P (−0.95 ≤ 𝑋 ≤ 0.95) = 0.9$
+
+_b) P(−z < Z < z) = 0, 95 (95, 0%)_
+
+**Resposta:** $P (−0.975 ≤ 𝑋 ≤ 0.975) = 0.95$
+
+_c) P(−z < Z < z) = 0, 99 (99, 0%)_
+
+**Resposta:** $P (−0.995 ≤ 𝑋 ≤ 0.995) = 0.99$
+
+_d) Esboce um gráfico para cada uma dessas situações e elabore uma tabela dos resultados obtidos para você memorizar._
