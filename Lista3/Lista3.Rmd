@@ -131,6 +131,36 @@ _h) input qnorm(0.05, mean = 100, sd = 5 lower.tail=FALSE) output: [1] 108.2243_
 _i) input qnorm(0.975, mean = 100, sd = 5, lower.tail=FALSE) output: [1] 90.20018_
 
 
+### Questão 3
+_A vida útil (em anos) de um computador pessoal tem distribuição aproximadamente normal com média de 2,9 anos e variância de 1,96 anos_
+
+_a)  Que proporção dos computadores falhará no primeiro ano?_
+
+**Resposta:** $0,4131 aproximadamente 41,31%.$
+
+_b) Que proporção dos computadores durará quatro anos ou mais?_
+
+**Resposta** $A proporção é de 78,52%.$
+
+_c)  Que proporção dos computadores durará no mínimo dois anos?_
+
+**Resposta** $A proporção é de 73,89%$
+
+_d) Que proporção dos computadores durará mais de 2,5 anos, porém menos de quatro anos?_ 
+
+**Resposta** $A proporção é de 39,93%.$
+
+_e)  Se o fabricante adota uma política de garantia segundo a qual no máximo 0,5% dos computadores devem de ser substituídos, qual é o período dessa garantia?_
+
+**Resposta** $O período é 6,498 anos.$
+
+_f) Se 10.000 computadores são vendidos, quantos esperasse serem devolvidos à fábrica segundo a política de garantia adotada acima?_
+
+**Resposta** $Espera-se a devolução de 50 computadores.$
+
+_g) Qual é o valor da vida útil em que o mesmo é superado em 5%?_
+
+**Resposta** $O valor da vida útil é 5,196 anos.$
 
 \newpage
 
