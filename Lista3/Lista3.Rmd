@@ -6,9 +6,9 @@ author:
 - 'Aluno: Gilmar Gonzaga da Silva - 119211123'
 date: 'Data: 20/05/2022'
 output:
+  html_document: default
   pdf_document:
     latex_engine: xelatex
-  html_document: default
 ---
 
 ```{r, include=FALSE}
@@ -25,7 +25,7 @@ _a) P(Z < 1,64)_
 
 _b) P(Z = 1,64)_
 
-**Resposta:** 0.9495
+**Resposta:** 0
 
 _c) P(Z ≤ 1,64)_
 
@@ -40,7 +40,6 @@ _e) P(−1,64 < Z < 1,64)_
 **Resposta:** 0.899
 
 _f) P(Z > 1,64)_
-
 **Resposta:** 0.0505
 
 _g) o valor do quantil z, da tabela (de preferência da acumulada) da normal padrão, tal que, P(Z < z) = 0, 05 (5%)_
@@ -49,7 +48,7 @@ _g) o valor do quantil z, da tabela (de preferência da acumulada) da normal pad
 
 _h) o valor do quantil z, da tabela da normal padrão, tal que, P(Z ≥ z) = 0, 05._
 
-**Resposta:** 1.64
+**Resposta:** 2.64
 
 _i) Apresente os inputs e ouputs usando a linguagem R de todos os cálculos dos itens anteriores._
 
@@ -57,7 +56,7 @@ _i) Apresente os inputs e ouputs usando a linguagem R de todos os cálculos dos 
 
 _a) input pnorm(1.64,mean=0,sd=1) output: [1] 0.9494974_
 
-_b) input pnorm(1.64,mean=0,sd=1) output: [1] 0.9494974_
+_b) input  output:_
 
 _c) input pnorm(1.64,mean=0,sd=1) output: [1] 0.9494974_
 
@@ -67,9 +66,9 @@ _e) input pnorm(1.64,mean=0,sd=1)-pnorm(-1.64,mean=0,sd=1) output:[1] 0.8989948_
 
 _f) input 1-pnorm(1.64,mean=0,sd=1) output: [1] 0.05050258_
 
-_g) input qnorm(0.05) output: [1] -1.644854_
+_g) input qnorm(0.05,mean=0,sd=1) output: [1] -1.644854_
 
-_h) input qnorm(0.05, lower.tail=FALSE) output: [1] 1.644854_
+_h) input 1-qnorm(0.05,mean=0,sd=1) output: [1] 2.644854_
 
 ### Questão 2
 _Seja X uma v.a, tal que, X ∼ N(100, 25), determinar:_
@@ -88,7 +87,7 @@ _c) P(89 ≤ X ≤ 107)_
 
 _d) P(12 < X − µ < 16)_
 
-**Resposta:** 
+**Resposta:** 0.0075
 
 _e) P(112 < X < 116)_
 
@@ -118,7 +117,7 @@ _b) input pnorm(100,mean=100,sd=5) output: [1] 0.5_
 
 _c) input pnorm(107, mean = 100, sd = 5) - pnorm(89, mean = 100, sd = 5) output: [1] 0.9053399_
 
-_d) FALTA: input output: [1]_
+_d) input pnorm(3.2,mean=0,sd=1)-pnorm(2.4,mean=0,sd=1) output: [1] 0.0075_
 
 _e) input pnorm(116, mean = 100, sd = 5) - pnorm(112, mean = 100, sd = 5) output:[1] 0.007510398_
 
@@ -161,6 +160,64 @@ _f) Se 10.000 computadores são vendidos, quantos esperasse serem devolvidos à 
 _g) Qual é o valor da vida útil em que o mesmo é superado em 5%?_
 
 **Resposta** $O valor da vida útil é 5,196 anos.$
+
+\newpage
+
+### Questão 4
+_Mostre que, em qualquer distribuição normal, à área sob a curva (probabilidade), determinada por cada um dos intervalos abaixo, é sempre a mesma e independente dos parâmetros da distribuição_
+
+_a) (µ − 1, 64σ; µ + 1, 64σ);_
+
+**Resposta**
+
+_para simplificar  atribuimos x = µ − 1, 64σ e y = µ + 1, 64σ_
+
+_portanto :_
+
+_Zy = 1,64 e Zx = - 1.64_
+
+_resolvendo P(Zx < Z < Zy)_
+
+_P(Zx < Z < Zy) = P(-1,64 < Z < 1,64)_
+
+_.              =  P(Z < 1,64) - P(Z < - 1,64)_
+
+_.              = 0.9495 - 0.0505 = 0.8990_
+
+_b) (µ − 1, 96σ; µ + 1, 96σ);_
+
+**Resposta**
+
+_para simplificar  atribuimos x = µ − 1, 96σ e y = µ + 1, 96σ_
+
+_portanto :_
+
+_Zy = 1, 96 e Zx = - 1, 96_
+
+_resolvendo P(Zx < Z < Zy)_
+
+_P(Zx < Z < Zy) = P(-1, 96 < Z < 1, 96)_
+
+_.              =  P(Z < 1, 96) - P(Z < - 1, 96)_
+
+_.              = 0.9750 - 0.0250 = 0.9500_
+
+_c) (µ − 2, 57σ; µ + 2, 57σ);_
+
+**Resposta**
+
+_para simplificar  atribuimos x = µ − 2,57 σ e y = µ + 2,57 σ_
+
+_portanto :_
+_Zy = 2,57  e Zx = - 2,57_
+
+_resolvendo P(Zx < Z < Zy)_
+
+_P(Zx < Z < Zy) = P( 2,57  < Z < 2,57)_
+
+_.              =  P(Z < 2,57) - P(Z < - 2,57 )_
+
+_.              = 0.9772 - 0.0227 = 0.9545_
 
 \newpage
 
