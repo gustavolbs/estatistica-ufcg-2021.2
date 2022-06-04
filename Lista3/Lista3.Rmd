@@ -6,9 +6,9 @@ author:
 - 'Aluno: Gilmar Gonzaga da Silva - 119211123'
 date: 'Data: 20/05/2022'
 output:
-  html_document: default
   pdf_document:
     latex_engine: xelatex
+  html_document: default
 ---
 
 ```{r, include=FALSE}
@@ -27,7 +27,7 @@ _b) P(Z = 1,64)_
 
 **Resposta:** 0
 
-_c) P(Z ≤ 1,64)_
+_c) P(Z $\leq$ 1,64)_
 
 **Resposta:** 0.9495
 
@@ -40,13 +40,14 @@ _e) P(−1,64 < Z < 1,64)_
 **Resposta:** 0.899
 
 _f) P(Z > 1,64)_
+
 **Resposta:** 0.0505
 
 _g) o valor do quantil z, da tabela (de preferência da acumulada) da normal padrão, tal que, P(Z < z) = 0, 05 (5%)_
 
 **Resposta:**  -1.644854
 
-_h) o valor do quantil z, da tabela da normal padrão, tal que, P(Z ≥ z) = 0, 05._
+_h) o valor do quantil z, da tabela da normal padrão, tal que, P(Z $\geq$ z) = 0, 05._
 
 **Resposta:** 2.64
 
@@ -73,7 +74,7 @@ _h) input 1-qnorm(0.05,mean=0,sd=1) output: [1] 2.644854_
 ### Questão 2
 _Seja X uma v.a, tal que, X ∼ N(100, 25), determinar:_
 
-_a) P(X ≥ 108)_
+_a) P(X $\geq$ 108)_
 
 **Resposta:** 0.0548
 
@@ -81,7 +82,7 @@ _b) P(X = 100)_
 
 **Resposta:** 0.5
 
-_c) P(89 ≤ X ≤ 107)_
+_c) P(89 $\leq$ X $\leq$ 107)_
 
 **Resposta:** 0.90534
 
@@ -109,7 +110,7 @@ _i) o valor do quantil x, tal que P(X > x) = 0, 975_
 
 **Resposta:** 90.2
 
-_j) Apresente os inputs e ouputs usando a linguagem R de todos os cálculos dos itensanteriores sem usar a distribuição da variável padronizada Z =_
+_j) Apresente os inputs e ouputs usando a linguagem R de todos os cálculos dos itensanteriores sem usar a distribuição da variável padronizada $Z =\frac{X−\mu}{σ}$._
 
 _a) input 1 - pnorm(108,mean=100,sd=5) output: [1] 0.05479929_
 
@@ -135,108 +136,116 @@ _A vida útil (em anos) de um computador pessoal tem distribuição aproximadame
 
 _a)  Que proporção dos computadores falhará no primeiro ano?_
 
-**Resposta:** $0,4131 aproximadamente 41,31%.$
+**Resposta:** $0,4131$ aproximadamente $41,31$%
 
 _b) Que proporção dos computadores durará quatro anos ou mais?_
 
-**Resposta** $A proporção é de 78,52%.$
+**Resposta** A proporção é de $78,52$%.
 
 _c)  Que proporção dos computadores durará no mínimo dois anos?_
 
-**Resposta** $A proporção é de 73,89%$
+**Resposta** A proporção é de $73,89$%
 
 _d) Que proporção dos computadores durará mais de 2,5 anos, porém menos de quatro anos?_ 
 
-**Resposta** $A proporção é de 39,93%.$
+**Resposta** A proporção é de $39,93$%.
 
 _e)  Se o fabricante adota uma política de garantia segundo a qual no máximo 0,5% dos computadores devem de ser substituídos, qual é o período dessa garantia?_
 
-**Resposta** $O período é 6,498 anos.$
+**Resposta** O período é $6,498$ anos.
 
 _f) Se 10.000 computadores são vendidos, quantos esperasse serem devolvidos à fábrica segundo a política de garantia adotada acima?_
 
-**Resposta** $Espera-se a devolução de 50 computadores.$
+**Resposta** Espera-se a devolução de $50$ computadores.
 
 _g) Qual é o valor da vida útil em que o mesmo é superado em 5%?_
 
-**Resposta** $O valor da vida útil é 5,196 anos.$
+**Resposta** O valor da vida útil é $5,196$ anos.
 
 \newpage
 
 ### Questão 4
 _Mostre que, em qualquer distribuição normal, à área sob a curva (probabilidade), determinada por cada um dos intervalos abaixo, é sempre a mesma e independente dos parâmetros da distribuição_
 
-_a) (µ − 1, 64σ; µ + 1, 64σ);_
+a) (µ − 1,64${σ}$; µ + 1,64${σ}$);
 
 **Resposta**
 
-_para simplificar  atribuimos x = µ − 1, 64σ e y = µ + 1, 64σ_
+para simplificar  atribuimos $x = µ − 1,64{σ}$ e $y = µ + 1,64{σ}$
 
 _portanto :_
 
-_Zy = 1,64 e Zx = - 1.64_
+$Zy = 1,64$ e $Zx = -1,64$
 
-_resolvendo P(Zx < Z < Zy)_
+resolvendo $P(Zx < Z < Zy)$
 
-_P(Zx < Z < Zy) = P(-1,64 < Z < 1,64)_
+$$P(Zx < Z < Zy) = P(-1,64 < Z < 1,64)$$
 
-_.              =  P(Z < 1,64) - P(Z < - 1,64)_
+$$=  P(Z < 1,64) - P(Z < - 1,64)$$
+$$  = 0.9495 - 0.0505 = 0.8990$$
 
-_.              = 0.9495 - 0.0505 = 0.8990_
+![Questão 4 letra A](q4a.png){width=300 height=150px}
 
-_b) (µ − 1, 96σ; µ + 1, 96σ);_
+b) (µ − 1,96${σ}$; µ + 1,96${σ}$);
 
 **Resposta**
 
-_para simplificar  atribuimos x = µ − 1, 96σ e y = µ + 1, 96σ_
+para simplificar  atribuimos $x = µ − 1,96{σ}$ e $y = µ + 1,96{σ}$
 
 _portanto :_
 
-_Zy = 1, 96 e Zx = - 1, 96_
+$Zy = 1,96$ e $Zx = -1,96$
 
-_resolvendo P(Zx < Z < Zy)_
+resolvendo $P(Zx < Z < Zy)$
 
-_P(Zx < Z < Zy) = P(-1, 96 < Z < 1, 96)_
+$$P(Zx < Z < Zy) = P(-1, 96 < Z < 1, 96)$$
 
-_.              =  P(Z < 1, 96) - P(Z < - 1, 96)_
+$$              =  P(Z < 1, 96) - P(Z < - 1, 96)$$
 
-_.              = 0.9750 - 0.0250 = 0.9500_
+$$              = 0.9750 - 0.0250 = 0.9500$$
 
-_c) (µ − 2, 57σ; µ + 2, 57σ);_
+![Questão 4 letra B](q4b.png){width=300 height=150px}
+
+
+c) (µ − 2,57${σ}$; µ + 2,57${σ}$);
 
 **Resposta**
 
-_para simplificar  atribuimos x = µ − 2,57 σ e y = µ + 2,57 σ_
+para simplificar  atribuimos $x = µ − 2,57{σ}$ e $y = µ + 2,57{σ}$
 
 _portanto :_
-_Zy = 2,57  e Zx = - 2,57_
 
-_resolvendo P(Zx < Z < Zy)_
+$Zy = 2,57$ e $Zx = -2,57$
 
-_P(Zx < Z < Zy) = P( 2,57  < Z < 2,57)_
+resolvendo $P(Zx < Z < Zy)$
 
-_.              =  P(Z < 2,57) - P(Z < - 2,57 )_
+$$P(Zx < Z < Zy) = P( 2,57  < Z < 2,57)$$
 
-_.              = 0.9772 - 0.0227 = 0.9545_
+$$              =  P(Z < 2,57) - P(Z < - 2,57 )$$
+
+$$              = 0.9772 - 0.0227 = 0.9545$$
+
+![Questão 4 letra C](q4c.png){width=300 height=150px}
+
 
 \newpage
 
 ### Questão 5
 _Se a variável aleatória Z segue o comportamento de uma distribuição normal padrão, diga quais devem ser o valor do quantil z tal que:_
 
-_a) P(−z < Z < z) = 0, 90 (90, 0%)_
+_a) P(−z < Z < z) = 0,90 (90,0%)_
 
 **Resposta:** $P (−0.95 ≤ 𝑋 ≤ 0.95) = 0.9$
 
 ![Questão 5 letra A](q5a.png){width=300 height=150px}
 
-_b) P(−z < Z < z) = 0, 95 (95, 0%)_
+_b) P(−z < Z < z) = 0,95 (95,0%)_
 
 **Resposta:** $P (−0.975 ≤ 𝑋 ≤ 0.975) = 0.95$
 
 ![Questão 5 letra B](q5b.png){width=300 height=150px}
 
-_c) P(−z < Z < z) = 0, 99 (99, 0%)_
+_c) P(−z < Z < z) = 0,99 (99,0%)_
 
 **Resposta:** $P (−0.995 ≤ 𝑋 ≤ 0.995) = 0.99$
 
