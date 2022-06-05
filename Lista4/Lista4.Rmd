@@ -1,0 +1,63 @@
+---
+title: "Lista 4"
+author: 
+- 'Aluno: Gustavo Luiz Bispo dos Santos - 117210400'
+- 'Aluno: Diego Amancio Pereira - 116210716'
+- 'Aluno: Gilmar Gonzaga da Silva - 119211123'
+date: 'Data: 05/06/2022'
+output: html_document
+---
+
+```{r, include=FALSE}
+library(Rlab)
+```
+
+### Questão 1
+_Uma v.a. X tem distribuição normal, com média 100 e desvio padrão 10._
+
+_a) Qual a P(90 < X < 110)?_
+
+**Resposta** 0,68268 ou 68,27%
+
+_b) Se X for a média de uma amostra de 16 elementos retiradas dessa população, calcule P(90 < X < 110)._
+
+**Resposta** 0,9999 ou 99,99%
+
+_c) Usando a linguagem R, represente, num único gráfico, as distribuições de X e X._
+
+**Resposta**
+
+_d) Que tamanho deveria ter a amostra para que P(90 < X < 110) = 0, 95?_
+
+**Resposta** 4
+
+### Questão 2
+_A máquina de empacotar um determinado produto o faz segundo uma distribuição normal,com média µ e desvio padrão 10 g_
+
+_a) Em quanto deve ser regulado o peso médio µ para que apenas 10% dos pacotes tenham menos do que 500 g?_
+
+**Resposta** 512,8
+
+_b) Com a máquina assim regulada, qual a probabilidade de que o peso total de 4 pacotes escolhidos ao acaso seja inferior a 2 kg?_
+
+**Resposta** aproximadamente 0,5%
+
+### Questão 3
+_No exemplo anterior, e após a máquina estar regulada, programou-se uma carta de controle de qualidade. De hora em hora, será retirada uma amostra de quatro pacotes e esses serão pesados. Se a média da amostra for inferior a 495 g ou superior a 520 g, encerra-se a produção para reajustar a máquina, isto é, reajustar o peso médio._
+
+_a) Qual a probabilidade de ser feita uma parada desnecessária?_
+
+**Resposta** 7,57%
+
+_b) Se o peso médio da máquina desregulou-se para 500 g, qual a probabilidade de continuar a produção fora dos padrões desejados?_
+
+**Resposta**  72,57%
+
+### Questão 4
+_Um procedimento de controle de qualidade foi planejado para garantir um máximo de 10% de itens defeituosos na produção. A cada 6 horas sorteia-se uma amostra de 20 peças e, havendo mais de 15% de defeituosos, encerra-se a produção para verificação do processo. Qual a probabilidade de uma parada desnecessária?_
+
+**Resposta**  aproximadamente 22,9%
+
+### Questão 5
+_Suponha que a produção do exemplo anterior esteja sob controle, isto é, p = 10%, e que os itens sejam vendidos em caixas com 100 unidades. Usando a distribuição de probabilidade exata e aproximada da variável Sn: total de itens defeituosos em uma caixa, calcule manualmente e ou usando o R a probabilidade de que uma caixa:_
+
