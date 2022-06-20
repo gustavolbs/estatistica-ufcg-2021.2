@@ -1,10 +1,12 @@
 ---
 title: "Lista 1"
-author: 
+author:
 - 'Aluno: Gustavo Luiz Bispo dos Santos - 117210400'
 - 'Aluno: Diego Amancio Pereira - 116210716'
 date: 'Data: 07/05/2022'
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r, include=FALSE}
