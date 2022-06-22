@@ -61,3 +61,19 @@ _Um procedimento de controle de qualidade foi planejado para garantir um máximo
 ### Questão 5
 _Suponha que a produção do exemplo anterior esteja sob controle, isto é, p = 10%, e que os itens sejam vendidos em caixas com 100 unidades. Usando a distribuição de probabilidade exata e aproximada da variável Sn: total de itens defeituosos em uma caixa, calcule manualmente e ou usando o R a probabilidade de que uma caixa:_
 
+_a) tenha mais do que 10% de itens defeituosos? _
+
+**Resposta** A probabilidade de uma proporção de mais de 0.1 defeituosos é dada por P(Z > 0) = 0.5
+
+_b) não tenha itens defeituosos?_
+
+**Resposta** P(0 defeituosos em 100) = 0.9^100 ≈ 2.65 × 10^-5, ou quase zero.
+
+### Questão 6
+**Voluntários se quotizam para realizar uma obra**
+_Uma instituição de caridade deseja realizar uma obra que custa R$3500,00 em sua sede. Entre os contribuintes habituais dessa instituição, cada um pode contribuir com algo em torno de R$120,00 um desvio padrão de R$50,00. Se 30 dessas pessoas se quotizarem para levantar fundos com essa finalidade, qual a probabilidade de que eles consigam o montante necessário?_
+
+**Resposta** A chance da obra ser realizada com base nesses 30 donativos seria de aproximadamente 64%.
+
+
+
