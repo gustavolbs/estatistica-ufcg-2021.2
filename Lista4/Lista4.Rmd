@@ -1,11 +1,13 @@
 ---
 title: "Lista 4"
-author: 
+author:
 - 'Aluno: Gustavo Luiz Bispo dos Santos - 117210400'
 - 'Aluno: Diego Amancio Pereira - 116210716'
 - 'Aluno: Gilmar Gonzaga da Silva - 119211123'
 date: 'Data: 05/06/2022'
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r, include=FALSE}
@@ -67,13 +69,56 @@ _a) tenha mais do que 10% de itens defeituosos? _
 
 _b) não tenha itens defeituosos?_
 
-**Resposta** P(0 defeituosos em 100) = 0.9^100 ≈ 2.65 × 10^-5, ou quase zero.
+**Resposta** P(0 defeituosos em 100) = 0.9^100 ~= 2.65 × 10^-5, ou quase zero.
 
 ### Questão 6
 **Voluntários se quotizam para realizar uma obra**
 _Uma instituição de caridade deseja realizar uma obra que custa R$3500,00 em sua sede. Entre os contribuintes habituais dessa instituição, cada um pode contribuir com algo em torno de R$120,00 um desvio padrão de R$50,00. Se 30 dessas pessoas se quotizarem para levantar fundos com essa finalidade, qual a probabilidade de que eles consigam o montante necessário?_
 
 **Resposta** A chance da obra ser realizada com base nesses 30 donativos seria de aproximadamente 64%.
+
+
+### Questão 7
+**Pesquisa de mercado**
+_Uma empresa estuda a possibilidade de lançar no mercado um novo detergente, por um preço um pouco mais alto do que o dos produtos similares, mas supostamente de qualidade muito superior. Para isso ela encomendou uma pesquisa de mercado onde $200$ consumidores escolhidos aleatoriamente serão ouvidos sobre sua intenção de adquirir o novo produto. A empresa sóo pretende lançá-lo de fato no mercado se pelo menos $40$ entre os consumidores consultados responderem favoravelmente. Seja $p$ a verdadeira proporção populacional dos consumidores dispostos a usar o novo produto._
+
+Trabalhando com a variável $S_{200}$: total de consumidores favoráveis à aquisição do novo detergente dentre os $200$ e, se $p = 0,15$:
+
+i) Calcule a probabilidade de que o lançamento ocorrerá utilizando a distribuição exata da variável $S_{200}$.
+
+**Resposta** $P(X \leq 40) ~= 0.9812$
+
+ii) Verifique se as condições de aproximação da distribuição binomial pela normal indicam uma boa aproximação da binomial para a distribuição normal.
+
+**Resposta** tendo em vista o resultado obtido na questão anterior, sim.
+
+iii) Calcule a probabilidade de que o lançamento ocorrerá utilizando a distribuição aproximada da variável $S_{200}$ sem e com a correção de continuidade.
+
+**Resposta** 
+
+Com correção: 
+
+$Pr(pˆ \leq 40)= Pr(Z\leq 1578.39)$
+
+$Pr(pˆ \leq 40)=1.$
+
+Sem correção:
+
+$Pr(pˆ \leq 40)= Pr(Z\leq 1578.3)$
+
+$Pr(pˆ \leq 40)=1.$
+
+iv) Calcule a probabilidade de que o lançamento ocorrerá utilizando a distribuição da proporção amostral, $P$.
+
+v) Comente sobre os resultados obtidos nos itens acima.
+
+**Resposta** Tendo em vista os resultados obtidos nas resoluções acima, fica evidente que a propabilidade do produto ser lançado no mercado é muito grande, pois, na maioria das vezes, temos uma probabilidade próxima a 100%.
+
+
+
+
+
+
 
 
 
