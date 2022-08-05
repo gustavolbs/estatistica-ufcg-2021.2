@@ -1,0 +1,28 @@
+---
+title: "Lista 2"
+author:
+- 'Aluno: Gustavo Luiz Bispo dos Santos - 117210400'
+- 'Aluno: Diego Amancio Pereira - 116210716'
+- 'Aluno: Gilmar Gonzaga da Silva - 119211123'
+- 'Aluno: Anderson - xxxxxxxx'
+date: 'Data: xx/xx/2022'
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r, include=FALSE}
+library(Rlab)
+```
+
+**Problema:** Problema: Com a chegada da pandemia foi necessário a adoção de uma biblioteca virtual para os estudantes da UFCG, mas é necessário avaliar se os mesmos mudaram seus hábitos de estudo, ou seja, começaram a adotar o estudo usando ebooks em detrimento do livro físico..
+
+**População:**  Estudantes de ciência da computação da UFCG.
+
+**Amostra:** Graduandos de ciência da computação da UFCG.
+
+**Espaço amostral:** Alunos que usam ebooks.
+
+**Objetivos geral e específicos:** Tentar descobrir a facilidade do acesso, frequência de uso e as quais são as vantagens da utilização dos E-books na visão dos discentes do curso de Ciência da Computação da Universidade Federal de Campina Grande.
+
+<br /><br /><br /><br /><br />
