@@ -8,7 +8,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ## ----instala_e_ou_carrega_pacotes_e_instancia_dados, echo=FALSE, warning=FALSE----
 library(ggplot2)
 
-teste2 <- readxl::read_excel("C:\\Users\\diego\\Desktop\\teste.xlsx", sheet = 1)
+teste2 <- readxl::read_excel("C:\\Users\\diego\\Desktop\\Uso de e-books pelos estudantes de ciência da computação da UFCG.xlsx", sheet = 1)
+
 
 teste2
 
@@ -41,4 +42,8 @@ for(i in 1:length(ebookReadFrequency)){
   ebookFreqAux <- c(ebookFreqAux, value)
 }
 cor.test(ebookFreqAux  ,teste2$ebookStudyAvaliable  , method = "spearman", exact=FALSE) 
+
+## ----box-plot_pie_chart-------------------------------------------------------
+
+
 

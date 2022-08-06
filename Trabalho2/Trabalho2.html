@@ -13,8 +13,8 @@
 <meta name="author" content="Aluno: Diego Amancio Pereira - 116210716" />
 <meta name="author" content="Aluno: Gilmar Gonzaga da Silva - 119211123" />
 <meta name="author" content="Aluno: Anderson - xxxxxxxx" />
+<meta name="author" content="Data: 2022-08-06" />
 
-<meta name="date" content="2022-08-06" />
 
 <title>Lista 2</title>
 
@@ -371,13 +371,11 @@ pre code {
 <h4 class="author">Aluno: Diego Amancio Pereira - 116210716</h4>
 <h4 class="author">Aluno: Gilmar Gonzaga da Silva - 119211123</h4>
 <h4 class="author">Aluno: Anderson - xxxxxxxx</h4>
-<h4 class="date">2022-08-06</h4>
+<h4 class="author">Data: 2022-08-06</h4>
 
 </div>
 
 
-<div id="section" class="section level28">
-<p class="heading"></p>
 <ol style="list-style-type: decimal">
 <li>Apresente/Descreva um problema em que seja necessário o planejamento
 e o desenvolvimento de uma pesquisa (estudo) estatística(o) para que o
@@ -395,11 +393,14 @@ estudo usando ebooks em detrimento do livro físico.</p>
 </ol>
 <p>Estudantes de ciência da computação da UFCG.</p>
 <ol start="2" style="list-style-type: lower-alpha">
-<li><p>Apresente os objetivos geral e específicos do estudo (pesquisa)
-estatístico(a). Tentar descobrir se com o uso de ebooks, os discentes do
-curso de Ciência da Computação da Universidade Federal de Campina Grande
-preferem usar ebooks para estudar</p></li>
-<li><p>A pesquisa requer a coleta de uma amostra? Por que?</p></li>
+<li>Apresente os objetivos geral e específicos do estudo (pesquisa)
+estatístico(a).</li>
+</ol>
+<p>Tentar descobrir se com o uso de ebooks, os discentes do curso de
+Ciência da Computação da Universidade Federal de Campina Grande preferem
+usar ebooks para estudar</p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>A pesquisa requer a coleta de uma amostra? Por que?</li>
 </ol>
 <p>Sim, pois existem mais de 500 alunos no curso de ciência da
 computação, (graduação e pós), por isso decidimos que a amostra seria os
@@ -424,32 +425,35 @@ objetivos geral e específicos, variáveis e tipos correspondentes
 mais interessam analisar.</p></li>
 <li><p>Anexe; separadamente; a base de dados em excel ou csv ou
 disponibilize o link de acesso à base.</p></li>
-<li><p>Desenvolva análise exploratória e descritiva dos dados sempre
-buscando responder aos objetivos e ou hipóteses da pesquisa / problema,
-com insigths de interesse prático.</p></li>
 </ol>
-<pre><code>## # A tibble: 42 × 5
-##    ebookStudyAvaliable isSatisfactoryUseEbook isEbookBetterPhy…¹ extre…² ebook…³
-##                  &lt;dbl&gt;                  &lt;dbl&gt;              &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;  
-##  1                   3                      4                  4       4 1 a 3 …
-##  2                   3                      1                  4       3 Rarame…
-##  3                   2                      3                  5       4 Rarame…
-##  4                   5                      5                  4       4 1 a 3 …
-##  5                   3                      4                  5       4 1 a 3 …
-##  6                   1                      5                  5       2 Rarame…
-##  7                   4                      5                  5       3 1 a 3 …
-##  8                   4                      1                  5       2 Rarame…
-##  9                   2                      1                  5       3 Rarame…
-## 10                   5                      5                  5       3 Mais d…
+<p><a href="https://docs.google.com/spreadsheets/d/1jRjWfcmxZGpSc55HqNKGVJooyXhJxOIiTrBUHxU25I0/edit?usp=sharing" class="uri">https://docs.google.com/spreadsheets/d/1jRjWfcmxZGpSc55HqNKGVJooyXhJxOIiTrBUHxU25I0/edit?usp=sharing</a></p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Desenvolva análise exploratória e descritiva dos dados sempre
+buscando responder aos objetivos e ou hipóteses da pesquisa / problema,
+com insigths de interesse prático.</li>
+</ol>
+<pre><code>## # A tibble: 42 × 6
+##    ebookStudyAvaliable isSatisfactoryUseEbook isEbookB…¹ bibli…² easyA…³ ebook…⁴
+##                  &lt;dbl&gt;                  &lt;dbl&gt;      &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;  
+##  1                   3                      4          4       4       4 1 a 3 …
+##  2                   3                      1          4       3       3 Rarame…
+##  3                   2                      3          5       4       4 Rarame…
+##  4                   5                      5          4       4       4 1 a 3 …
+##  5                   3                      4          5       4       4 1 a 3 …
+##  6                   1                      5          5       2       2 Rarame…
+##  7                   4                      5          5       3       3 1 a 3 …
+##  8                   4                      1          5       2       2 Rarame…
+##  9                   2                      1          5       3       3 Rarame…
+## 10                   5                      5          5       3       3 Mais d…
 ## # … with 32 more rows, and abbreviated variable names
-## #   ¹​isEbookBetterPhysicalBook, ²​extremeBookAvaliableUFCG, ³​ebookReadFrequency
+## #   ¹​isEbookBetterPhysicalBook, ²​bibliographCourseAvaliable,
+## #   ³​easyAcessUfcgEbooks, ⁴​ebookReadFrequency
 ## # ℹ Use `print(n = ...)` to see more rows</code></pre>
 <p>valor 1 = discordo totalmente.</p>
 <p>valor 2 = discordo.</p>
 <p>valor 3 = neutro.</p>
 <p>valor 4 = concordo.</p>
 <p>valor 5 = concordo totalmente.</p>
-</div>
 <div id="grafico-frequência-de-leitura-de-ebookdisponivel-online-na-biblioteca-da-ufcg" class="section level1">
 <h1>Grafico frequência de leitura de ebook/disponivel online na
 biblioteca da UFCG</h1>

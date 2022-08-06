@@ -5,7 +5,7 @@ author:
 - 'Aluno: Diego Amancio Pereira - 116210716'
 - 'Aluno: Gilmar Gonzaga da Silva - 119211123'
 - 'Aluno: Anderson - xxxxxxxx'
-date: "`r Sys.Date()`"
+- 'Data: `r Sys.Date()`' 
 output: html_document
 editor_options: 
   chunk_output_type: console
@@ -20,17 +20,18 @@ knitr::knit_hooks$set(purl = knitr::hook_purl) # Para gerar .R
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-############################
 1) Apresente/Descreva um problema em que seja necessário o planejamento e o desenvolvimento de uma pesquisa (estudo) estatística(o) para que o mesmo seja resolvido.
 
   Com a chegada da pandemia foi necessário a adoção de uma biblioteca virtual para os estudantes da UFCG, mas é necessário avaliar se os mesmos mudaram seus hábitos de estudo, ou seja, começaram a adotar o estudo usando ebooks em detrimento do livro físico.
 
 2) A partir do problema descrito acima:
+
 a) Diga qual é a população associada ao problema e o tipo.
 
  Estudantes de ciência da computação da UFCG.
  
 b) Apresente os objetivos geral e específicos do estudo (pesquisa) estatístico(a).
+  
   Tentar descobrir se com o uso de ebooks, os discentes do curso de Ciência da Computação da Universidade Federal de Campina Grande preferem usar ebooks para estudar
 
 d) A pesquisa requer a coleta de uma amostra? Por que?
@@ -51,12 +52,15 @@ a) Descreva o problema, população, amostra, tipo de amostragem, objetivos gera
 b) Anexe; separadamente; a base de dados em excel ou csv ou disponibilize o link de
 acesso à base.
 
+https://docs.google.com/spreadsheets/d/1jRjWfcmxZGpSc55HqNKGVJooyXhJxOIiTrBUHxU25I0/edit?usp=sharing
+
 c) Desenvolva análise exploratória e descritiva dos dados sempre buscando responder aos
 objetivos e ou hipóteses da pesquisa / problema, com insigths de interesse prático.
 ```{r instala_e_ou_carrega_pacotes_e_instancia_dados, echo=FALSE, warning=FALSE}
 library(ggplot2)
 
-teste2 <- readxl::read_excel("C:\\Users\\diego\\Desktop\\teste.xlsx", sheet = 1)
+teste2 <- readxl::read_excel("C:\\Users\\diego\\Desktop\\Uso de e-books pelos estudantes de ciência da computação da UFCG.xlsx", sheet = 1)
+
 
 teste2
 
@@ -72,6 +76,7 @@ valor 4 = concordo.
 valor 5 = concordo totalmente.
 
 # Grafico frequência de leitura de ebook/disponivel online na biblioteca da UFCG
+
 ```{r box-plot_disponibilidade}
 ggplot(data = teste2, mapping = aes(x = ebookStudyAvaliable)) +
   geom_histogram(color = "white") +
@@ -107,4 +112,7 @@ cor.test(ebookFreqAux  ,teste2$ebookStudyAvaliable  , method = "spearman", exact
 
 A correlação não é significativa, pois o p-value não é menor que 0,05.
 
+```{r box-plot_pie_chart}
 
+
+```
