@@ -6,7 +6,9 @@ author:
 - 'Aluno: Gilmar Gonzaga da Silva - 119211123'
 - 'Aluno: Anderson - xxxxxxxx'
 date: "`r Sys.Date()`"
-output: html_document
+output: 
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -14,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ############################
-1) Apresente/Descreva um problema em que seja necessário o planejamento e o desenvolvimento de uma pesquisa(estudo) estatística(o) para que o mesmo seja resolvido.
+1) Apresente/Descreva um problema em que seja necessário o planejamento e o desenvolvimento de uma pesquisa (estudo) estatística(o) para que o mesmo seja resolvido.
 
   Com a chegada da pandemia foi necessário a adoção de uma biblioteca virtual para os estudantes da UFCG, mas é necessário avaliar se os mesmos mudaram seus hábitos de estudo, ou seja, começaram a adotar o estudo usando ebooks em detrimento do livro físico.
 
@@ -22,22 +24,25 @@ knitr::opts_chunk$set(echo = TRUE)
 a) Diga qual é a população associada ao problema e o tipo.
 
  Estudantes de ciência da computação da UFCG.
-b) Apresente os objetivos geral e específicos do estudo(pesquisa) estatístico(a).
-  Tentar descobrir a facilidade do acesso, frequência de uso e as quais são as vantagens da utilização dos E-books na visão dos discentes do curso de Ciência da Computação da Universidade Federal de Campina Grande.
+ 
+b) Apresente os objetivos geral e específicos do estudo (pesquisa) estatístico(a).
 
+  Tentar descobrir a facilidade do acesso, frequência de uso e quais são as vantagens da utilização dos E-books na visão dos discentes do curso de Ciência da Computação da Universidade Federal de Campina Grande.
 
 d) A pesquisa requer a coleta de uma amostra? Por que?
-Sim, pois tem mais de 500 alunos no curso de ciencia da computação, (graduaçção e pós), por isso decidimos que a amostra seria os graduandos de ciência da computação da UFCG, que são a parte da população mais afetada pelo problema.
 
-e) Na sua pesquisa o que pode ser apresentado como exemplo de parˆametro, estat´ıstica e
+Sim, pois existem mais de 500 alunos no curso de ciência da computação, (graduação e pós), por isso decidimos que a amostra seria os graduandos de ciência da computação da UFCG, que são a parte da população mais afetada pelo problema.
+
+e) Na sua pesquisa o que pode ser apresentado como exemplo de parâmetro, estatística e
 estimativa?
 
-3) Apresente ou colete uma base de dados necessária para a resolução de um problema (pode er o mesmo do item 1) que requer uma análise estatística descritiva e inferencial.
+3) Apresente ou colete uma base de dados necessária para a resolução de um problema (pode ser o mesmo do item 1) que requer uma análise estatística descritiva e inferencial.
 
 a) Descreva o problema, população, amostra, tipo de amostragem, objetivos geral e específicos, variáveis e tipos correspondentes (qualitativa ou quantitativa), além de dizer quais são os parâmetros que mais interessam analisar.
 
 b) Anexe; separadamente; a base de dados em excel ou csv ou disponibilize o link de
-acesso á base.
+acesso à base.
+
 c) Desenvolva análise exploratória e descritiva dos dados sempre buscando responder aos
 objetivos e ou hipóteses da pesquisa / problema, com insigths de interesse prático.
 
