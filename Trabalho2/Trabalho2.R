@@ -7,6 +7,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## ----instala_e_ou_carrega_pacotes_e_instancia_dados, echo=FALSE, warning=FALSE----
 library(ggplot2)
+
 teste2 <- readxl::read_excel("C:\\Users\\diego\\Desktop\\teste.xlsx", sheet = 1)
 
 teste2
@@ -20,30 +21,24 @@ ggplot(data = teste2, mapping = aes(x = ebookStudyAvaliable)) +
 
 ## ----box-plot_correlacao------------------------------------------------------
 
-ebookStudyAvaliable = teste2$ebookStudyAvaliable
 ebookReadFrequency = teste2$ebookReadFrequency
 
-ebookAvaliableAux = c()
 ebookFreqAux = c()
 
 for(i in 1:length(ebookReadFrequency)){
-  value <- 0
+  value <- 2
   indexFreq <- ebookReadFrequency[i]
-  avaliableIndex <- ebookStudyAvaliable[i]
-  if(avaliableIndex > 2){
-    if(indexFreq == "Raramente"){
-      value = 3
-    }else if(indexFreq == "1 a 3 vezes"){
-      value <- 4
-    }else if(indexFreq  == "Mais de 3 vezes"){
-       value <- 5
-    }
-    if(value > 0){
-        ebookAvaliableAux <- c(ebookAvaliableAux, avaliableIndex)
-        ebookFreqAux <- c(ebookFreqAux, value)
-    }
-  }
 
+  if(indexFreq == "Nunca"){
+    value <- 1
+  }  else if(indexFreq == "Raramente"){
+    value <- 3
+  }else if(indexFreq == "1 a 3 vezes"){
+    value <- 4
+  }else if(indexFreq  == "Mais de 3 vezes"){
+     value <- 5
+  }
+  ebookFreqAux <- c(ebookFreqAux, value)
 }
-cor.test(ebookFreqAux,ebookAvaliableAux, method = "spearman", exact=FALSE) 
+cor.test(ebookFreqAux  ,teste2$ebookStudyAvaliable  , method = "spearman", exact=FALSE) 
 
