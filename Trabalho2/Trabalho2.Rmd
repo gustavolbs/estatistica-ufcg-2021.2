@@ -36,6 +36,10 @@ Sim, pois existem mais de 500 alunos no curso de ciência da computação, (grad
 e) Na sua pesquisa o que pode ser apresentado como exemplo de parâmetro, estatística e
 estimativa?
 
+VA: Satisfação de uso de E-books.
+Parâmetro: Número de elementos com grande satisfação.
+Estimativa: Seria o valor aproximado desse parâmetro.
+
 3) Apresente ou colete uma base de dados necessária para a resolução de um problema (pode ser o mesmo do item 1) que requer uma análise estatística descritiva e inferencial.
 
 a) Descreva o problema, população, amostra, tipo de amostragem, objetivos geral e específicos, variáveis e tipos correspondentes (qualitativa ou quantitativa), além de dizer quais são os parâmetros que mais interessam analisar.
