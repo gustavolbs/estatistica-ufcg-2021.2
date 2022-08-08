@@ -1,61 +1,63 @@
 ---
 title: "Lista 2"
-author:
+author: 
 - 'Aluno: Gustavo Luiz Bispo dos Santos - 117210400'
 - 'Aluno: Diego Amancio Pereira - 116210716'
 - 'Aluno: Gilmar Gonzaga da Silva - 119211123'
-- 'Aluno: Anderson - xxxxxxxx'
-- 'Data: `r Sys.Date()`' 
+- 'Aluno: Anderson Kleber Dantas - 117110537'
+date: "`r Sys.Date()`"
 output: html_document
 editor_options: 
   chunk_output_type: console
 ---
 
-
 ```{r setup, include=FALSE}
 knitr::knit_hooks$set(purl = knitr::hook_purl) # Para gerar .R
 # Outra forma para Extrair Chunk do RMarkdown:
 #https://felixfan.github.io/extract-r-code/
-
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-1) Apresente/Descreva um problema em que seja necessário o planejamento e o desenvolvimento de uma pesquisa (estudo) estatística(o) para que o mesmo seja resolvido.
+1) Apresente/Descreva um problema em que seja necessário o planejamento e o desenvolvimento de uma pesquisa(estudo) estatística(o) para que o mesmo seja resolvido.  
 
-  Com a chegada da pandemia foi necessário a adoção de uma biblioteca virtual para os estudantes da UFCG, mas é necessário avaliar se os mesmos mudaram seus hábitos de estudo, ou seja, começaram a adotar o estudo usando ebooks em detrimento do livro físico.
+    Com a chegada da pandemia foi necessário a adoção de uma biblioteca virtual para os   estudantes da UFCG, mas é necessário avaliar se os mesmos mudaram seus hábitos de estudo, ou seja, começaram a adotar o estudo usando ebooks em detrimento do livro físico.
 
 2) A partir do problema descrito acima:
 
-a) Diga qual é a população associada ao problema e o tipo.
+    a) Diga qual é a população associada ao problema e o tipo.  
+        População: Estudantes de ciência da computação da UFCG.  
+        Tipo: População infinita.
+        
+    b) Apresente os objetivos geral e específicos do estudo(pesquisa) estatístico(a).  
 
- Estudantes de ciência da computação da UFCG.
- 
-b) Apresente os objetivos geral e específicos do estudo (pesquisa) estatístico(a).
-  
-  Tentar descobrir se com o uso de ebooks, os discentes do curso de Ciência da Computação da Universidade Federal de Campina Grande preferem usar ebooks para estudar
+        Tentar descobrir se com o uso de ebooks, os discentes do curso de Ciência da Computação da Universidade Federal de Campina Grande preferem usar ebooks para estudar.
 
-d) A pesquisa requer a coleta de uma amostra? Por que?
+    c) Diga quais variáveis e quais os seus tipos (categórica ou quantitativa) podem ser de interesse na pesquisa.
 
-Sim, pois existem mais de 500 alunos no curso de ciência da computação, (graduação e pós), por isso decidimos que a amostra seria os graduandos de ciência da computação da UFCG, que são a parte da população mais afetada pelo problema.
+        Satisfação de uso de (ebooks), quantitativa;  
+        Frequência de uso (ebooks), quantitativa;  
+        Disponibilidade (ebooks), quantitativa.
 
-e) Na sua pesquisa o que pode ser apresentado como exemplo de parâmetro, estatística e
-estimativa?
+    d) A pesquisa requer a coleta de uma amostra? Por que?  
+    
+        Sim, pois tem mais de 500 alunos no curso de ciencia da computação, (graduação e pós), por isso decidimos que a amostra seria uma parcela dos graduandos de ciência da computação da UFCG, que são a parte da população mais afetada pelo problema.
 
-VA: Satisfação de uso de E-books.
-Parâmetro: Número de elementos com grande satisfação.
-Estimativa: Seria o valor aproximado desse parâmetro.
+    e) Na sua pesquisa o que pode ser apresentado como exemplo de parâmetro, estatística e estimativa?
+
+        VA: Satisfação de uso de E-books.  
+        Parâmetro: Número de elementos com grande satisfação.  
+        Estimativa: Seria o valor aproximado desse parâmetro.  
 
 3) Apresente ou colete uma base de dados necessária para a resolução de um problema (pode ser o mesmo do item 1) que requer uma análise estatística descritiva e inferencial.
 
-a) Descreva o problema, população, amostra, tipo de amostragem, objetivos geral e específicos, variáveis e tipos correspondentes (qualitativa ou quantitativa), além de dizer quais são os parâmetros que mais interessam analisar.
+    a) Descreva o problema, população, amostra, tipo de amostragem, objetivos geral e específicos, variáveis e tipos correspondentes (qualitativa ou quantitativa), além de dizer quais são os parâmetros que mais interessam analisar.
+    
+        O problema é o mesmo das questões 1 e 2.
+    b) Anexe; separadamente; a base de dados em excel ou csv ou disponibilize o link de acesso á base.
+    
+        [Link de acesso](https://docs.google.com/spreadsheets/d/1jRjWfcmxZGpSc55HqNKGVJooyXhJxOIiTrBUHxU25I0/edit?usp=sharing)
+    c) Desenvolva análise exploratória e descritiva dos dados sempre buscando responder aos objetivos e ou hipóteses da pesquisa / problema, com insigths de interesse prático.
 
-b) Anexe; separadamente; a base de dados em excel ou csv ou disponibilize o link de
-acesso à base.
-
-https://docs.google.com/spreadsheets/d/1jRjWfcmxZGpSc55HqNKGVJooyXhJxOIiTrBUHxU25I0/edit?usp=sharing
-
-c) Desenvolva análise exploratória e descritiva dos dados sempre buscando responder aos
-objetivos e ou hipóteses da pesquisa / problema, com insigths de interesse prático.
 ```{r instala_e_ou_carrega_pacotes_e_instancia_dados, echo=FALSE, warning=FALSE}
 library(ggplot2)
 
