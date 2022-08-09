@@ -58,11 +58,12 @@ knitr::opts_chunk$set(echo = TRUE)
         [Link de acesso](https://docs.google.com/spreadsheets/d/1jRjWfcmxZGpSc55HqNKGVJooyXhJxOIiTrBUHxU25I0/edit?usp=sharing)
     c) Desenvolva análise exploratória e descritiva dos dados sempre buscando responder aos objetivos e ou hipóteses da pesquisa / problema, com insigths de interesse prático.
 
+        Inicialmente organizamos os dados de interesse e fizemos um resumo em forma de gráficos de frequência:
+
 ```{r instala_e_ou_carrega_pacotes_e_instancia_dados, echo=FALSE, warning=FALSE}
 library(ggplot2)
 
-teste2 <- readxl::read_excel("C:\\Users\\diego\\Desktop\\Uso de e-books pelos estudantes de ciência da computação da UFCG.xlsx", sheet = 1)
-
+teste2 <- readxl::read_excel("Uso de e-books pelos estudantes de ciência da computação da UFCG.xlsx", sheet = 1)
 
 teste2
 
@@ -86,7 +87,9 @@ ggplot(data = teste2, mapping = aes(x = ebookStudyAvaliable)) +
   labs(x="Disponibilidade de ebooks para estudo")
 ```
 
-# Correlação de "Os livros que preciso durante o meu estudo, maijoritariamente estão disponíveis em e-book" com "frequencia de leitura semanal dos ebooks".
+Com base no gráfico acima, foi observado que o fato de o livro ser usado em disciplina e estar disponível na biblioteca virtual parece implicar em maior procura e consequentemente, maior utilização de livros em formato digital (ebook). Entao foi aplicado um teste de correlação para verificar esta hipótese:
+
+# Correlação de "Os livros que preciso durante o meu estudo, marjoritariamente estão disponíveis em e-book" com "frequencia de leitura semanal dos ebooks".
 
 ```{r box-plot_correlacao}
 
@@ -112,7 +115,7 @@ for(i in 1:length(ebookReadFrequency)){
 cor.test(ebookFreqAux  ,teste2$ebookStudyAvaliable  , method = "spearman", exact=FALSE) 
 ```
 
-A correlação não é significativa, pois o p-value não é menor que 0,05.
+Conclusão: A correlação não é significativa, pois o p-value não é menor que 0,05.
 
 ```{r box-plot_pie_chart}
 
