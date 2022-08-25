@@ -58,63 +58,15 @@ knitr::opts_chunk$set(echo = TRUE)
         [Link de acesso](https://docs.google.com/spreadsheets/d/1jRjWfcmxZGpSc55HqNKGVJooyXhJxOIiTrBUHxU25I0/edit?usp=sharing)
     c) Desenvolva análise exploratória e descritiva dos dados sempre buscando responder aos objetivos e ou hipóteses da pesquisa / problema, com insigths de interesse prático.
 
+Base de dados é uma planilha com 7 variáveis, pegando dos aspectos de uso de ebook, livro impresso até a disponibilidade dos ebooks para uso nas disciplinas durante a graduação na ufcg. 
 ```{r instala_e_ou_carrega_pacotes_e_instancia_dados, echo=FALSE, warning=FALSE}
 library(ggplot2)
+library (car)
 
-teste2 <- readxl::read_excel("C:\\Users\\diego\\Desktop\\Uso de e-books pelos estudantes de ciência da computação da UFCG.xlsx", sheet = 1)
-
-
-teste2
-
-```
-valor 1 = discordo totalmente.
-
-valor 2 = discordo.
-
-valor 3 = neutro.
-
-valor 4 = concordo.
-
-valor 5 = concordo totalmente.
-
-# Grafico frequência de leitura de ebook/disponivel online na biblioteca da UFCG
-
-```{r box-plot_disponibilidade}
-ggplot(data = teste2, mapping = aes(x = ebookStudyAvaliable)) +
-  geom_histogram(color = "white") +
-  facet_wrap(~ ebookReadFrequency, ncol = 1) +
-  labs(x="Disponibilidade de ebooks para estudo")
-```
-
-# Correlação de "Os livros que preciso durante o meu estudo, maijoritariamente estão disponíveis em e-book" com "frequencia de leitura semanal dos ebooks".
-
-```{r box-plot_correlacao}
-
-ebookReadFrequency = teste2$ebookReadFrequency
-
-ebookFreqAux = c()
-
-for(i in 1:length(ebookReadFrequency)){
-  value <- 2
-  indexFreq <- ebookReadFrequency[i]
-
-  if(indexFreq == "Nunca"){
-    value <- 1
-  }  else if(indexFreq == "Raramente"){
-    value <- 3
-  }else if(indexFreq == "1 a 3 vezes"){
-    value <- 4
-  }else if(indexFreq  == "Mais de 3 vezes"){
-     value <- 5
-  }
-  ebookFreqAux <- c(ebookFreqAux, value)
-}
-cor.test(ebookFreqAux  ,teste2$ebookStudyAvaliable  , method = "spearman", exact=FALSE) 
-```
-
-A correlação não é significativa, pois o p-value não é menor que 0,05.
-
-```{r box-plot_pie_chart}
+matrix <- readxl::read_excel("C:\\Users\\diego\\Desktop\\formsGoogle.xlsx", sheet = 1)
+matrix
 
 
+matrix <- matrix %>% mutate(interesting1=recode(interesting, "concordo totalmente." = 1))
+ 
 ```

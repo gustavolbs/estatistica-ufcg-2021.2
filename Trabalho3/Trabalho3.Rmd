@@ -1,0 +1,170 @@
+---
+title: "Lista 3"
+author: 
+- 'Aluno: Gustavo Luiz Bispo dos Santos - 117210400'
+- 'Aluno: Diego Amancio Pereira - 116210716'
+- 'Aluno: Gilmar Gonzaga da Silva - 119211123'
+- 'Aluno: Anderson Kleber Dantas - 117110537'
+date: "`r Sys.Date()`"
+output: pdf_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+if(!require(pacman)) install.packages("pacman")
+library(pacman)
+
+pacman::p_load(dplyr, ggplot2, car, rstatix, lmtest, ggpubr)
+
+```
+
+# Desenvolvimento de uma Pesquisa com Análise de Correlação e regressão Linear Simples
+
+1) Apresente/Descreva um conjunto de dados que contenha duas (2) variáveis do tipo quantitativa (numérica) cujo interesse é investigar sobre a existência de uma relação linear entre elas. Descreva o contexto ao qual a base de dados está inserida.
+
+Os dados foram extraídos da revista Motor Trend US de 1974 e abrangem o consumo de combustível e 10 aspectos do design e desempenho do automóvel para 32 automóveis (modelos de 1973 a 74).
+
+As variáveis que serão usadas são mpg (Milhas/galão) e hp (potência bruta).
+
+hp:  é o valor medido no eixo motor, com os acessórios necessários para ligá-lo e funcionar autonomamente. 
+
+galão: 1 galão  = 3,78544 litros
+
+```{r cars}
+dados <- mtcars
+dados
+```
+
+2) A partir das duas (2) variáveis adotadas para análise:
+
+a) Desenvolva uma breve análise exploratória/descritiva das mesmas;
+
+b) Desenvolva e interprete de forma prática uma análise de correlação.
+
+```{r pressure, echo=FALSE}
+ 
+
+ggplot(dados, aes(x=mpg, y=hp)) +
+  geom_point() +
+  labs(x='(Milhas/galão)', y='potência bruta', 
+       title='Relação entre (Milhas/galão) e potência bruta')
+
+
+
+```
+
+Como visto no gráfico de dispersão quanto menor a potencia do automovel menos potencia temos, mas para podermos validar essa correlação, faremos a correlação de pearson.
+
+```{r correlação}
+
+# Teste de hipotese sobre correlacao nula
+cor.test(dados$mpg, dados$hp)
+
+```
+
+Dado o intervalo de confiança -0.8852686 -0.5860994, é demonstrado que não contém a correlação nula.
+
+c) Desenvolva e interprete de forma prática uma análise de regressão linear simples,
+incluindo a análise de resíduos e previsões para alguns valores estabelecidos para a
+variável independente, X = x.
+
+Estimacao dos Parametros do Modelo de Regressao Linear Simples (MRLS) 
+
+Os coeficientes estimados
+```{r mrls}
+
+
+
+mod <- lm(hp ~ mpg, data=dados)
+mod
+
+```
+
+inferencias
+
+```{r inferencias}
+summary(mod)
+
+```
+
+Desvio padrão relacionado ao valor  324.08 é  -8.83
+
+Normalidade dos residuos:
+
+```{r Normalidade}
+
+shapiro.test(mod$residuals)
+
+```
+
+Outliers nos residuos
+
+```{r Outliers}
+
+
+summary(rstandard(mod))
+
+```
+
+Independencia dos residuos (Durbin-Watson)
+
+```{r Independencia}
+
+durbinWatsonTest(mod)
+
+```
+
+Homocedasticidade (Breusch-Pagan)
+
+```{r Homocedasticidade}
+
+bptest(mod)
+
+```
+
+Analise do modelo
+
+```{r Analise}
+
+summary(mod)
+
+```
+
+Apresentacao Grafica
+ 
+```{r Apresentacao Grafica}
+
+ggplot(data = dados, mapping = aes(x=mpg, y=hp)) +
+  geom_point() +
+  geom_smooth(method = "lm", col = "red") +
+  stat_regline_equation(aes(label = paste(..eq.label.., ..adj.rr.label..,
+                                          sep = "*plain(\",\")~~")),
+                        label.x = 10, label.y = 50) +
+  labs(x='milhas rodadas por galão',y='Potencia do motor',
+       title='Ajuste de um Modelo de Regressão Linear Simples',
+       subtitle = 'Potencia do motor x Milhas rodadas por galão')
+
+```
+
+Predição
+
+```{r deee}
+
+df.teste <- data.frame(mpg = c(21))
+df.teste
+
+predict(mod, df.teste)
+
+
+# Prevendo varios valores:
+df.teste <- data.frame(mpg = c(29,45,38))
+df.teste
+
+predict(mod, df.teste)
+
+
+
+```
