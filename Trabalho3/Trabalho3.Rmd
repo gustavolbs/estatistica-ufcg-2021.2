@@ -25,7 +25,7 @@ pacman::p_load(dplyr, ggplot2, car, rstatix, lmtest, ggpubr)
 
 1) Apresente/Descreva um conjunto de dados que contenha duas (2) variáveis do tipo quantitativa (numérica) cujo interesse é investigar sobre a existência de uma relação linear entre elas. Descreva o contexto ao qual a base de dados está inserida.
 
-Os dados foram extraídos da revista Motor Trend US de 1974 e abrangem o consumo de combustível e 10 aspectos do design e desempenho do automóvel para 32 automóveis (modelos de 1973 a 74).
+Os dados foram extraídos da revista Motor Trend US de 1974 e abrangem o consumo de combustível e 10 aspectos do design e desempenho do automóvel para 32 automóveis (modelos de 1973 a 1974).
 
 As variáveis que serão usadas são mpg (Milhas/galão) e hp (potência bruta).
 
@@ -42,57 +42,71 @@ dados
 
 a) Desenvolva uma breve análise exploratória/descritiva das mesmas;
 
+```{r chart to mpg}
+mpg <- dados[,1]
+
+hist(mpg, prob=TRUE, main = "Milhas por Galão")
+
+lines(density(mpg))
+```
+
+Como visto no gráfico, nosso conjunto de dados possui mais carros com consumo médio de 15 a 20 milhas por galão.
+
+```{r chart to hp}
+hp <- dados[,4]
+
+hist(hp, prob=TRUE, main = "Força bruta")
+
+lines(density(hp))
+```
+
+Como visto no gráfico, nosso conjunto de dados possui mais carros com força bruta entre 50 a 150 hp.
+
+Dessa forma, conseguimos estabelecer que carros com menor potência tendem a ter um menor consumo médio de galões por milhas.
+
 b) Desenvolva e interprete de forma prática uma análise de correlação.
 
 ```{r pressure, echo=FALSE}
- 
-
 ggplot(dados, aes(x=mpg, y=hp)) +
   geom_point() +
   labs(x='(Milhas/galão)', y='potência bruta', 
        title='Relação entre (Milhas/galão) e potência bruta')
-
-
-
 ```
 
-Como visto no gráfico de dispersão quanto menor a potencia do automovel menos potencia temos, mas para podermos validar essa correlação, faremos a correlação de pearson.
+Como visto no gráfico de dispersão quanto menor a potência do automóvel, menos potência temos, mas para podermos validar essa correlação, faremos a correlação de pearson.
 
 ```{r correlação}
 
-# Teste de hipotese sobre correlacao nula
+# Teste de hipótese sobre correlação nula
 cor.test(dados$mpg, dados$hp)
 
 ```
 
 Dado o intervalo de confiança -0.8852686 -0.5860994, é demonstrado que não contém a correlação nula.
 
-c) Desenvolva e interprete de forma prática uma análise de regressão linear simples,
-incluindo a análise de resíduos e previsões para alguns valores estabelecidos para a
-variável independente, X = x.
+c) Desenvolva e interprete de forma prática uma análise de regressão linear simples, incluindo a análise de resíduos e previsões para alguns valores estabelecidos para a variável independente, X = x.
 
-Estimacao dos Parametros do Modelo de Regressao Linear Simples (MRLS) 
+Estimação dos Parâmetros do Modelo de Regressão Linear Simples (MRLS)
 
 Os coeficientes estimados
 ```{r mrls}
-
-
 
 mod <- lm(hp ~ mpg, data=dados)
 mod
 
 ```
 
-inferencias
+Inferências
 
 ```{r inferencias}
+
 summary(mod)
 
 ```
 
 Desvio padrão relacionado ao valor  324.08 é  -8.83
 
-Normalidade dos residuos:
+Normalidade dos resíduos:
 
 ```{r Normalidade}
 
@@ -100,16 +114,15 @@ shapiro.test(mod$residuals)
 
 ```
 
-Outliers nos residuos
+Outliers nos resíduos
 
 ```{r Outliers}
-
 
 summary(rstandard(mod))
 
 ```
 
-Independencia dos residuos (Durbin-Watson)
+Independência dos resíduos (Durbin-Watson)
 
 ```{r Independencia}
 
@@ -125,17 +138,17 @@ bptest(mod)
 
 ```
 
-Analise do modelo
+Análise do modelo
 
-```{r Analise}
+```{r Análise}
 
 summary(mod)
 
 ```
 
-Apresentacao Grafica
+Apresentação Gráfica
  
-```{r Apresentacao Grafica}
+```{r Apresentação Gráfica}
 
 ggplot(data = dados, mapping = aes(x=mpg, y=hp)) +
   geom_point() +
@@ -143,28 +156,25 @@ ggplot(data = dados, mapping = aes(x=mpg, y=hp)) +
   stat_regline_equation(aes(label = paste(..eq.label.., ..adj.rr.label..,
                                           sep = "*plain(\",\")~~")),
                         label.x = 10, label.y = 50) +
-  labs(x='milhas rodadas por galão',y='Potencia do motor',
+  labs(x='milhas rodadas por galão',y='Potência do motor',
        title='Ajuste de um Modelo de Regressão Linear Simples',
-       subtitle = 'Potencia do motor x Milhas rodadas por galão')
+       subtitle = 'Potência do motor x Milhas rodadas por galão')
 
 ```
 
 Predição
 
-```{r deee}
+```{r Predição}
 
 df.teste <- data.frame(mpg = c(21))
 df.teste
 
 predict(mod, df.teste)
 
-
-# Prevendo varios valores:
+# Prevendo vários valores:
 df.teste <- data.frame(mpg = c(29,45,38))
 df.teste
 
 predict(mod, df.teste)
-
-
 
 ```
