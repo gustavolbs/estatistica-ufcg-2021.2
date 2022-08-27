@@ -33,6 +33,8 @@ hp:  é o valor medido no eixo motor, com os acessórios necessários para ligá
 
 galão: 1 galão  = 3,78544 litros
 
+Link para dataset: https://docs.google.com/spreadsheets/d/1NkBDKYcavat33frY1zlPJmurnCLzJkstndK3oJR3i-0/edit
+
 ```{r cars}
 dados <- mtcars
 dados
@@ -94,7 +96,19 @@ Os coeficientes estimados
 mod <- lm(hp ~ mpg, data=dados)
 mod
 
+par(mfrow=c(2,2), mar=c(3,3,3,3))
+
+plot(mod)
+
 ```
+
+Como visto no primeiro gráfico ("Residuals vs Fitted"), há linearidade na relação entre potência e consumo médio.
+
+Como visto no segundo gráfico ("Normal Q-Q"), os resíduos se aproximam da reta diagonal, isso indica que os erros aleatórios tem distribuição normal.
+
+Como visto no terceiro gráfico ("Scale-Location"), os resíduos que estão dispersos no começo do gráfico possuem variância diferente dos demais resíduos ao centro e ao final. Desta forma concluímos que não há satisfação da homocedasticidade.
+
+Como visto no quarto gráfico ("Residuals vs Leverage"), os resíduos que estão dispersos entre as linhas de distância de Cook, ou seja, não temos pontos de alavancagem, ou seja, podemos acreditar que nossas inferências e gráficos possuem alto grau de veracidade.
 
 Inferências
 
